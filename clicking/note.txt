@@ -1,0 +1,1 @@
+egyszerűség kedvéért csináltam egy mappát a jateknak, hogy szerintem igy atlathatobb, mintha csak összepakolnánk egybe. css még nincs, design se, azt majd a főöldalhoz igazítom.
