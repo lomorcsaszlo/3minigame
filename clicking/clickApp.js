@@ -1,3 +1,14 @@
+/* addEventListener("DOMContentLoaded", function(){
+    circleAppearing()
+    CircleDissapear()
+})
+
+ */
+
+
+
+
+
 
 
 function randomColor() {
@@ -14,11 +25,27 @@ function randomPositionTop(){
 
 function circleAppearing(){
     const circle = document.querySelector(".circle")
-
     circle.style.backgroundColor = randomColor()
     circle.style.display = "block"
     circle.style.top = randomPositionTop()
     circle.style.left = randomPositionTop()
 }
 
-circleAppearing()
+function CircleDissapear(){
+    var count = 0
+    const circle = document.querySelector(".circle")
+    const countWrite = document.querySelector(".count")
+    
+    circle.addEventListener("click", function(){
+        circle.style.display = "none"
+        count += 1
+        countWrite.innerHTML= count
+        circleAppearing()
+        
+        
+
+
+    })
+    
+}
+

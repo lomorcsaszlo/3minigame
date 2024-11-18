@@ -7,11 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="box">
-        <div class="circle">
+    <div class="main">
+        <div class="textIGuess">
+            <h3>Test your reflexes in this fast-paced game! Circles appear randomly on the screen—click them before they disappear to score points. Each successful click spawns a new circle in a different spot. How fast can you go? Challenge yourself and improve your reaction speed!</h3>
+        </div>
+        <div class="count">
             
         </div>
+        <div class="box">
+            <div class="circle">
+                
+            </div>
+        </div>
+        <div class="but">
+            <h2>Start Game!</h2>
+        </div>
     </div>
+    
 
 
 
@@ -24,18 +36,18 @@
         }
 
         .box {
-            position: relative;  /* Parent container for positioning */
+            position: relative;  
             height: 70vh;
             width: 80%;
             background-color: red;
             margin: 0 auto;
-            margin-top: 10vh;
+            margin-top: 3vh;
             border-radius: 20px;
-            overflow: hidden;  /* Prevent the circle from going outside */
+            overflow: hidden; 
         }
 
         .circle {
-            position: absolute;  /* Absolute positioning inside the box */
+            position: absolute;  
             height: 70px;
             width: 70px;
             border-radius: 50%;
@@ -44,7 +56,24 @@
             display: none;
             
         }
-
+        .count{
+            text-align: center;
+            font-size: 5vh;
+        }
+        .textIGuess{
+            text-align: center;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .but{
+            text-align: center;
+            padding: 2px;
+            background-color: pink;
+            max-width: 10vw;
+            margin: 10px auto;
+            border-radius: 20px;
+            
+        }
 
     </style>
 </body>
