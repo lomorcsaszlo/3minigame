@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="clickApp.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="textIGuess">
+            <h3>Test your reflexes in this fast-paced game! Circles appear randomly on the screen—click them before they disappear to score points. Each successful click spawns a new circle in a different spot. How fast can you go? Challenge yourself and improve your reaction speed!</h3>
+        </div>
+        <div class="count">
+            
+        </div>
+        <div class="box">
+            <div class="circle">
+                
+            </div>
+        </div>
+        <div class="but">
+            <h2>Start Game!</h2>
+        </div>
+    </div>
+    
+
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            position: relative;  
+            height: 70vh;
+            width: 80%;
+            background-color: red;
+            margin: 0 auto;
+            margin-top: 3vh;
+            border-radius: 20px;
+            overflow: hidden; 
+            
+        }
+
+        .circle {
+            position: absolute;  
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            left: 90%;
+            top: 50%;
+            display: none;
+            
+        }
+        .count{
+            text-align: center;
+            font-size: 5vh;
+        }
+        .textIGuess{
+            text-align: center;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .but{
+            text-align: center;
+            padding: 5px;
+            background-color: pink;
+            max-width: 13vw;
+            margin: 10px auto;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+    </style>
+</body>
+</html>
