@@ -1,0 +1,35 @@
+*{
+    border: 0; margin: 0; box-sizing: border-box;
+    color: white;
+}
+body{
+    background-image: url("/images/background2.jpg");
+}
+h3{
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid black;
+    width: 200px;
+    margin: 1rem auto;
+    height: 6vh;
+    background-color: blueviolet;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    height: 90vh;
+    width: 50vh;
+    
+    margin:  auto;
+    color: white;
+    background-color: blueviolet;
+}
+.grid div{
+    
+    background-color: blue;
+   
+}
+
+.mydiv{
+    
+}
