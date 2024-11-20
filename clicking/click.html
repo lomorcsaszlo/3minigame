@@ -11,6 +11,7 @@
         <div class="textIGuess">
             <h3>Test your reflexes in this fast-paced game! Circles appear randomly on the screen—click them before they disappear to score points. Each successful click spawns a new circle in a different spot. How fast can you go? Challenge yourself and improve your reaction speed!</h3>
         </div>
+        
         <div class="count">
             
         </div>
@@ -21,6 +22,10 @@
         </div>
         <div class="but">
             <h2>Start Game!</h2>
+        </div>
+        <div class="textIGuess">
+            <h4 id="HS"></h4>
+            <h4 class="paste">Copy my High Score!</h4>
         </div>
     </div>
     
@@ -33,6 +38,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         .box {
@@ -73,6 +79,13 @@
             max-width: 13vw;
             margin: 10px auto;
             border-radius: 20px;
+            cursor: pointer;
+        }
+        #HS{
+            display: none;
+        }
+        .paste{
+            display: none;
             cursor: pointer;
         }
 
