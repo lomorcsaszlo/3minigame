@@ -1,4 +1,3 @@
-
 addEventListener("DOMContentLoaded", function(){
     isThereAnyHS()
 })
