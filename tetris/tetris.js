@@ -29,7 +29,7 @@ function canIcolorIt(){
 
 
 function inovelo(){
-  if (i < 20){
+  if (i < 20 && squares[parseInt(`${i}${horizont}`)].style.backgroundColor != "black"){
     squares[parseInt(`${i}${horizont}`)].style.backgroundColor = "black"
     canIcolorIt()
   }
@@ -44,18 +44,22 @@ function inovelo(){
   i++
   return i
 }
-
 function left() {
-  horizont -= 1
+  if (squares[parseInt(`${i}${horizont-1}`)].style.backgroundColor != "black"){
+    horizont -= 1
+
   canIcolorIt()
   squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black"
+  }
 }
 function right() {
-  horizont += 1
+  if (squares[parseInt(`${i}${horizont+1}`)].style.backgroundColor != "black"){
+    horizont += 1
+  
   canIcolorIt()
   squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black"
+  }
 }
-
 document.addEventListener('keydown', function(event) {
   if (event.key === 'ArrowLeft') {
       left()
@@ -68,11 +72,7 @@ document.addEventListener('keydown', function(event) {
       //a jobbra meg lett nyomva
   }
 });
-
-
   setInterval(() => {
       i = inovelo();//folyamatos futás 
-  }, 100);
-
-
+  }, 1000);
 })
