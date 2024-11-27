@@ -9,7 +9,10 @@
     <title>Document</title>
 </head>
 <body>
+    <audio id="song" src="BCKsong.mp3"></audio>
+
     <div class="main">
+        
         <div class="textIGuess">
             <h3>Test your reflexes in this fast-paced game! Circles appear randomly on the screen—click them before they disappear to score points. Each successful click spawns a new circle in a different spot. How fast can you go? Challenge yourself and improve your reaction speed!</h3>
         </div>
@@ -17,7 +20,7 @@
         <div class="count">
             
         </div>
-        <div class="box nes-container is-centered  ">
+        <div class="box nes-container is-centered">
             <div class="circle">
                 <img src="pxArt-2.png" alt="">
             </div>
@@ -28,6 +31,21 @@
         <div class="textIGuess">
             <h4 id="HS"></h4>
             <h4 class="paste">Copy my High Score!</h4>
+            <h4 class="leader">Leaderboard</h4>
+        </div>
+
+
+        <div class="leaderboard nes-container is-dark">
+            <p>Yoshikage - 20</p>
+            <p>Tony - 17</p>
+            <p>Marty - 16</p>
+            <p>V - 14</p>
+            <p>Kiryu - 12</p>
+            <p>Dwight - 12</p>
+            <p>Joffrey - 2</p>
+
+            
+
         </div>
     </div>
     
@@ -46,7 +64,7 @@
 
         .box {
             position: relative;  
-            height: 70vh;
+            height: 60vh;
             width: 80%;
             margin: 0 auto;
             margin-top: 3vh;
@@ -86,6 +104,16 @@
         .paste{
             display: none;
             cursor: pointer;
+        }
+        .leader{
+            cursor: pointer;
+        }
+
+        .leaderboard{
+            max-width: 50%;
+            text-align: center;
+            left: 25%;
+            display: block;
         }
 
         .main{
