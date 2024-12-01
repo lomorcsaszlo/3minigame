@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <script src="js.js"></script>
+    <title>Shooting Game</title>
+    
+</head>
+
+<body>
+    <h2 class="score">0</h2>
+    <div class="game">
+        <main>
+        
+        
+
+
+
+        </main>
+    </div>
+    <button type="button" class="nes-btn start">Start Game</button>
+
+
+    
+    
+
+
+
+
+    <style>
+        body{
+            background-color: #000;
+            text-align: center;
+        }
+        .score{
+            background-color: #000;
+            color: white;
+            text-align: center;
+        }
+        .game {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+            background-color: #000;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(40, 1fr);
+            height: 80%;
+            width: 80%;
+            margin: auto;
+            background-color: black;
+            border: solid 1px white;
+            cursor: none;
+        }
+    </style>
+</body>
+
+</html>
