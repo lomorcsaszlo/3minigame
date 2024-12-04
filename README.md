@@ -19,7 +19,7 @@ Welcome to Αρκαδία!
 
 The are four types of games: 
 
-- [Tetris](#https://github.com/lomorcsaszlo/3minigame/tree/main/tetris)
+- [Tetris](#tetris)
 - [Mastermind Game](#Master)
 - [Shooting Game](#Shooting)
 - [Clicking Game](#Clicking)
