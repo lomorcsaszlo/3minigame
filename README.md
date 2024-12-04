@@ -4,7 +4,7 @@ Welcome to Αρκαδία!
 Αρκαδία is a to relive the 80's with retro style games.
 
 
-- [About the Game](#about-the-game)
+- [About the Game]
 - [Installation](#installation)
 - [Gameplay](#gameplay)
 - [Controls](#controls)
