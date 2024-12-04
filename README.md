@@ -1,4 +1,4 @@
-# Αρκαδία
+# 🔴⚪🔵Αρκαδία🔵⚪🔴
 
 Welcome to Αρκαδία!
 Αρκαδία is a to relive the 80's with retro style games.
@@ -28,7 +28,7 @@ The are four types of games:
 
 
 
-# Αρκαδία
+# 🔴⚪🟢Αρκαδία🟢⚪🔴
 
 Üdvözlünk az **Αρκαδία** világában!
 Az **Αρκαδία** célja, hogy újraéldd a 80-as éveket retro stílusú játékokkal.
