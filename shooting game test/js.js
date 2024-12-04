@@ -1,5 +1,10 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
+
+
     const start = document.querySelector(".start")
+    const stop = document.querySelector(".stop")
     const main = document.querySelector('main');
     for (let i = 0; i < 800; i++) {
         const pixel = document.createElement('div');
@@ -9,9 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     start.addEventListener("click", function(){
+        start.style.display = "none"
+/*         stop.style.display = "inline" */
         shootingChar();
         setInterval(target, 3000)
     })
+    
     
     
 
@@ -68,6 +76,7 @@ function shootingChar() {
 }
 
 function target(){
+
     const pixels = document.querySelectorAll("main div");
     pixels[Math.floor(Math.random() * 600)].style.backgroundColor="blue"
 }
