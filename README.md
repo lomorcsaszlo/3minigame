@@ -1,1 +1,2 @@
-# 3minigame
+# 3minig
+## watashi no namai wa Kira Yoshikage.
