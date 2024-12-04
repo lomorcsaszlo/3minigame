@@ -24,3 +24,28 @@ The are four types of games:
 
 
 ## Clicking Game
+
+
+
+
+# Αρκαδία
+
+Üdvözlünk az **Αρκαδία** világában!
+Az **Αρκαδία** célja, hogy újraéldd a 80-as éveket retro stílusú játékokkal.
+
+## A Játékokról
+
+Négyféle játék található:
+
+- Tetris
+- Mastermind Játék
+- Lövöldözős Játék
+- Kattintós Játék
+
+## Tetris
+
+## Mastermind Játék
+
+## Lövöldözős Játék
+
+## Kattintós Játék
