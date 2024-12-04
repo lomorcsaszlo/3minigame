@@ -1,6 +1,6 @@
-
 addEventListener("DOMContentLoaded", function(){
     isThereAnyHS()
+    
 })
 
 
@@ -26,7 +26,7 @@ function StartGame() {
     circleAppearing(); 
     CircleDissapear();
     timer();
-    
+    playsong()
 }
 
 
@@ -41,7 +41,7 @@ function randomPositionTop() {
 
 function circleAppearing() {
     const circle = document.querySelector(".circle");
-    circle.style.backgroundColor = randomColor();
+    
     circle.style.display = "block";
     circle.style.top = randomPositionTop();
     circle.style.left = randomPositionTop();
@@ -83,13 +83,14 @@ function end() {
 
     const startBut = document.querySelector(".but");
     startBut.style.display = "block"
+    stopsong()
 }
 
 function timer() {
     setTimeout(() => {
         end();  
         highScore();  
-    }, 4000); 
+    }, 10000); 
 }
 
 
@@ -108,3 +109,15 @@ const pasteHs =  document.querySelector(".paste")
 pasteHs.addEventListener("click", function(){
     navigator.clipboard.writeText("My high score is: " + localStorage.getItem("High Score"))
 })
+
+function playsong(){
+    song = document.getElementById("song")
+    song.play();
+}
+
+function stopsong(){
+    song = document.getElementById("song")
+    song.pause();
+}
+
+

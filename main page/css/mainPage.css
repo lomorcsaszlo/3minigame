@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Tiny5&display=swap');
+*{box-sizing: border-box; margin: 0; padding: 0;}
+body{
+    font-family: "Tiny5", sans-serif;
+}
+h1{
+    padding: 20px;
+    background-color: #000237;
+    color: #fff;
+}
+.box p{
+    padding: 50px;
+    background-color: #DDE0BD;
+    color: #fff
+}
+.butt a{
+    padding: 10px 50px;
+    background-color: #ae0202;
+    color: #fff;
+    text-decoration: none;
+}
