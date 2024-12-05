@@ -21,10 +21,14 @@ The are four types of games:
 
 
 ## Shooting Game
-
+In this game the goal is to shoot as much blue targets as possible. New target appearing in every 3 seconds.
+Controls:
+- a: move the shooter left
+- d: move the shooter right
+- space: shoot :)
 
 ## Clicking Game
-
+In this game the goal is to click more targets in 10 seconds. 
 
 
 
@@ -47,5 +51,11 @@ Négyféle játék található:
 ## Mastermind Játék
 
 ## Lövöldözős Játék
+Ebben a játékban a cél, hogy minél több kék célt lőj le. Minden 3 másodpercben új cél jelenik meg.  
+**Irányítás**:
+- **A**: A lövő balra mozgása  
+- **D**: A lövő jobbra mozgása  
+- **Space**: Lőj :)
 
 ## Kattintós Játék
+Ebben a játékban a cél, hogy minél több célt kattints meg 10 másodperc alatt.
