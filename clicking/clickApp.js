@@ -1,6 +1,7 @@
 addEventListener("DOMContentLoaded", function(){
     isThereAnyHS()
     
+    
 })
 
 
@@ -120,4 +121,45 @@ function stopsong(){
     song.pause();
 }
 
+
+function leaderBoard(){
+    const leaderboard = document.querySelector(".leaderboard")
+    const leaderbut = document.querySelector(".leader")
+    const startBut = document.querySelector(".but");
+    const maingame = document.querySelector(".box")
+    leaderbut.addEventListener("click", function(){
+        if(leaderboard.style.display === "none"){
+            leaderboard.style.display = "block"
+            startBut.style.display = "none"
+            maingame.style.display = "none"
+            leaderbut.innerHTML = "Close Leaderboard"
+        }else{
+            leaderboard.style.display = "none"
+            startBut.style.display = "block"
+            maingame.style.display = "block"
+            leaderbut.innerHTML = "Leaderboard"
+        }
+        
+        
+    })
+}
+
+function leaderboardDisplay(){
+    const leaders = document.querySelectorAll(".leaderboard p")
+    const leaderB = document.querySelectorAll(".leaderboard")
+    for(let i = 0; i < leaders.length; i++){
+        if (leaders[i].innerHTML.slice(-2) < localStorage.getItem("High Score") ){
+            /* const p = document.createElement("p");
+            p.innerHTML = "You";
+            leaders.appendChild(p); */
+        }
+    }
+    
+}
+leaderboardDisplay()
+
+
+
+
+leaderBoard()
 
