@@ -18,7 +18,11 @@ The are four types of games:
 
 
 ## Mastermind game
-
+this game's goal is to guess a combination based on the colors of the balls and the order of them. it is based on the infamous game called Színözön, as if it was rewinded back to the 80s.
+**controls**
+click on the color of the ball listed in the right column to input it. you have to guess four colors.
+black peg next to the color combination: the color is guessed correctly, and it is in the right hole.
+white peg next to the color combination: the color is guessed correctly, but it is in the wrong hole.
 
 ## Shooting Game
 In this game the goal is to shoot as much blue targets as possible. New target appearing in every 3 seconds.
@@ -50,6 +54,10 @@ Négyféle játék található:
 ## Tetris
 
 ## Mastermind Játék
+A játék célja, hogy kitalálj egy kombinációt a golyók színei és azok sorrendje alapján. Az ismert Színözön nevű játékra épül, mintha visszatekertük volna az időt az 1980-as évekbe.
+
+**Irányítás**
+Kattints a jobb oldali oszlopban felsorolt színű golyóra, hogy beírd azt. Négy színt kell kitalálnod. Fekete golyó az színkombináció mellett: a szín helyesen lett kitalálva, és a megfelelő helyre került. Fehér golyó a színkombináció mellett: a szín helyesen lett kitalálva, de nem került a megfelelő helyre.
 
 ## Lövöldözős Játék
 Ebben a játékban a cél, hogy minél több kék célt lőj le. Minden 3 másodpercben új cél jelenik meg.  
