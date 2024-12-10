@@ -3,7 +3,9 @@
     color: white;
 }
 body{
-    background-image: url("/images/background2.jpg");
+    /* background-image: url("/images/background2.jpg"); */
+    background-color: black;
+    
 }
 h3{
     text-align: center;

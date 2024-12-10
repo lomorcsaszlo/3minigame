@@ -1,7 +1,4 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
-
 
     const start = document.querySelector(".start")
     const stop = document.querySelector(".stop")
@@ -10,20 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const pixel = document.createElement('div');
         main.appendChild(pixel);
     }
-
-
-    
     start.addEventListener("click", function(){
         start.style.display = "none"
 /*         stop.style.display = "inline" */
         shootingChar();
         setInterval(target, 3000)
     })
-    
-    
-    
 
-    
 });
 
 function shootingChar() {
