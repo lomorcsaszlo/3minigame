@@ -61,3 +61,5 @@ Ebben a játékban a cél, hogy minél több kék célt lőj le. Minden 3 másod
 ## Kattintós Játék
 **Ebben a játékban a cél, hogy minél több célt kattints meg 10 másodperc alatt.**  
 Van egy aranyos ranglista is, ami csak szórakozásból van, nincs igazi funkciója.
+
+
