@@ -3,9 +3,6 @@ const pk = document.querySelectorAll(".nes-container p");
 const main = new Audio('../musics/MainTheme1.mp3');
 
 document.addEventListener("DOMContentLoaded", function() {
-
-
-    
     main.muted = true;
     main.play()
         .then(() => {
