@@ -3,39 +3,36 @@
 body{
     font-family: "Tiny5", sans-serif;
     background-color: #000;
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
-h1{
-    padding: 20px;
-    background-color: #000237;
+.contain{
+    margin: 0 auto;
+    margin-top: 25vh;
+    max-width: 50%;
+}
+.nes-container{
+    background-color: #fff9ef;
+    
+}
+p{
+    margin: 0;
+}
+p:hover{
+    background-color: #000;
     color: #fff;
 }
-header img{
-    width: 5%;
+h5{
+    text-align: right;
 }
-.nav ul{
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    background-color: #dddd99;
-
+h1{
+    font-size: 60px;
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(21, 21, 156), green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }
-li a{
-    color: #000;
-    text-decoration: none;
-    gap: 200px;
-    padding: 20px;
-}
-main{
-    border: 8px solid silver;
-    width: 100vw;
-    height: 100vh;
-    border: 5px solid silver;
-    box-shadow: 0 0 10px 2px #505050;
-}
-.card{
+html{
+    cursor: not-allowed;
 }
