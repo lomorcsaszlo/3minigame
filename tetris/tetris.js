@@ -27,7 +27,7 @@ function slectedarea(){ //az adott elem alatt kijelöli a helyet, ahová esni fo
     if (myi < 20 && squares[parseInt(`${myi}${myhorizont}`)].style.backgroundColor != "black"){
       for (let index = myi; index <20 ; index++) {
         if (squares[parseInt(`${index}${myhorizont}`)].style.backgroundColor != "black"){// csak akor lesz fehér az alatta lévő elemek színe, ha az nem fekete 
-          squares[parseInt(`${index}${myhorizont}`)].style.backgroundColor = "white"
+          squares[parseInt(`${index}${myhorizont}`)].style.backgroundColor = "floralwhite"
         }       
       }
       myi = i //sorok, oszlopok resetelése
@@ -37,7 +37,7 @@ function slectedarea(){ //az adott elem alatt kijelöli a helyet, ahová esni fo
       //ez az előző blokk beszínezése miatt kell, fluidabb így
 
     }
-    squares[parseInt(`${i}${myhorizont}`)].style.backgroundColor = "white"
+    squares[parseInt(`${i}${myhorizont}`)].style.backgroundColor = "floralwhite"
       myi++
   
   // if (myi < 20 && squares[parseInt(`${myi}${myhorizont}`)].style.backgroundColor != "black"){
@@ -56,6 +56,7 @@ function inovelo(i,horizont){
     squares[parseInt(`${i}${horizont}`)].style.backgroundColor = "black"
     canIcolorIt()
     slectedarea()
+    
   }
   else{
     squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black"//ez az előző blokk beszínezése miatt kell, fluidabb így
@@ -73,29 +74,34 @@ function inovelo(i,horizont){
 }
 //különböző gomblenyomások esetén viselkedés
 function left() {
-  if (squares[parseInt(`${i}${horizont-1}`)].style.backgroundColor != "black"){
+  if (squares[parseInt(`${i}${horizont-1}`)].style.backgroundColor != "black" && horizont != 0){ //1x ne legyen védett mező, illetve ne is legyen a szélén hogy oldalra menjen.
     horizont -= 1
-
+    slectedarea()
   canIcolorIt()
   squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black"
   }
 }
 function right() {
-  if (squares[parseInt(`${i}${horizont+1}`)].style.backgroundColor != "black"){
+  if (squares[parseInt(`${i}${horizont+1}`)].style.backgroundColor != "black" && horizont!=9){ //ugyan az, csak a másik oldal.
     horizont += 1
+    slectedarea()
   
   canIcolorIt()
+  
   squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black"
   }
 }
 function down() {
   i = inovelo(i, horizont);
+  
 }
 function space() {
   while((i < 20 && squares[parseInt(`${i}${horizont}`)].style.backgroundColor != "black")){
     i = inovelo(i, horizont)
+   
   }
   i = inovelo(i, horizont)
+  
 }
 document.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowLeft') left();
@@ -103,9 +109,14 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowDown') down();
   if (event.key === ' ') space();
 });
+document.addEventListener('click', () => {
+  space(); // Mouse click
+  
+});
 
 setInterval(() => {
   i = inovelo(i, horizont);//folyamatos futás 
+  
   
 }, mytime);
 })
