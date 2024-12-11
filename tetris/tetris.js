@@ -84,7 +84,10 @@ function space() {
 let clicked = false;
 
 StartBtn.addEventListener("click", function(event){ //a start megnyomására indul minden-
-  clicked = true
+  clicked = true;
+  if (!StartBtn.classList.contains("hidden")){
+    StartBtn.classList.add("hidden"); //szín reset, de csak ha az a szín még nem ért le.
+  }
 });
 document.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowLeft') left();
