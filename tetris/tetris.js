@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', ()=>{
 const grid = document.querySelector('.grid');
-const mytime = 500;
+const mytime = 380;
 for (let i = 0; i < 200; i++) {
     const div = document.createElement('div');  // Create a diveket
     grid.appendChild(div);  
@@ -12,6 +12,22 @@ let horizont = 4; //9 oszlop van
 const ScoreDisplay = document.querySelector("#score");
 const StartBtn = document.querySelector("#start-button");
 
+function deleterow(){
+  let tempcount = 0;
+  for (let sor1 = 0; sor1 < 20; sor1++) {
+  for (let oszlop = 0; oszlop < 10; oszlop++) {
+    if (squares[parseInt(`${sor1}${oszlop}`)].style.backgroundColor == "black"){
+      tempcount +=1;
+    }
+  }
+  if (tempcount == 11){
+    for (let myvar = 0; myvar < 10; myvar++) {
+      squares[parseInt(`${sor1}${myvar}`)].style.backgroundColor == "";
+      squares[parseInt(`${sor1}${myvar}`)].classList.remove("anyád");
+    }
+  }
+}
+}
 function canIcolorIt(){ //törli azokat az elemeket, amiken nincsen rajta a class
   squares.forEach(element => {
     if (!element.classList.contains("anyád")){
@@ -42,19 +58,21 @@ function resetposition(){ //visszaállítja az eredeti állapotokat miután leé
 };
 //a lefelé mozgás
 function inovelo(i,horizont){
+  let tempi = 0;
   if (i < 20 && squares[parseInt(`${i}${horizont}`)].style.backgroundColor != "black"){
     squares[parseInt(`${i}${horizont}`)].style.backgroundColor = "black";
     canIcolorIt();
     slectedarea();
+    tempi = i;
+    tempi++;
   }
   else{
     squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black";//ez az előző blokk beszínezése miatt kell, fluidabb így
     squares[parseInt(`${i-1}${horizont}`)].classList.add("anyád");//ez már nem törölhető canicolorit-tel
-    resetposition();
+    resetposition()
   }
   squares[parseInt(`${i}${horizont}`)].style.backgroundColor = "black";
-  i++;
-  return i;
+  return tempi;
 };
 //különböző gomblenyomások esetén viselkedés
 function left() {
@@ -73,7 +91,6 @@ function right() {
   squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black";
   }
 };
-
 function space() {
   while((i < 20 && squares[parseInt(`${i}${horizont}`)].style.backgroundColor != "black")){
     i = inovelo(i, horizont)
@@ -101,6 +118,7 @@ grid.addEventListener('click', () => {
 setInterval(() => {
   if (clicked == true){
   i = inovelo(i, horizont);//folyamatos futás 
+  deleterow();
 }
 }, mytime);
 })
