@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
         /*         stop.style.display = "inline" */
         shootingChar();
         setInterval(target, 3000)
+        assaultTheme.play()
+        assaultTheme.volume = 0.4
 
 
 
@@ -50,6 +52,7 @@ function shootingChar() {
     document.addEventListener("keydown", function (event) {
         if (event.key === ' ') {
             shoot(position);
+            
         }
     });
     // CONTROLLER __________---------___________-----------_________
@@ -106,7 +109,9 @@ function shootingChar() {
                 // Handle A button (spacebar for shooting)
                 else if (gamepad.buttons[XboxButtons.A].pressed && !previousAButtonState) {
                     shoot(position); // Trigger shoot action
-                    previousAButtonState = true; // Update the previous state to "pressed"
+                    previousAButtonState = true;
+                    
+                     // Update the previous state to "pressed"
                 }
 
                 // Reset the state when the button is released
@@ -136,6 +141,8 @@ function shootingChar() {
                     if (pixels[shootPos].style.backgroundColor === "blue") {
                         points += 1;
                         counter.innerHTML = points
+                        
+                        shipExpoltano.play()
                     }
                     pixels[shootPos].style.backgroundColor = "red";
                 }
