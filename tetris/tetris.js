@@ -14,19 +14,28 @@ const StartBtn = document.querySelector("#start-button");
 
 function deleterow(){
   let tempcount = 0;
+  sor1 = 0;
+  oszlop = 0;
   for (let sor1 = 0; sor1 < 20; sor1++) {
-  for (let oszlop = 0; oszlop < 10; oszlop++) {
+    let mysor = sor1-1;
+    for (let oszlop = 0; oszlop < 10; oszlop++) {
     if (squares[parseInt(`${sor1}${oszlop}`)].style.backgroundColor == "black"){
-      tempcount +=1;
+      if (sor1 == mysor){
+        tempcount +=1;
+      }
+      else{
+        mysor = sor1;
+      }
     }
   }
-  if (tempcount == 11){
+  if (tempcount == 10){
     for (let myvar = 0; myvar < 10; myvar++) {
       squares[parseInt(`${sor1}${myvar}`)].style.backgroundColor == "";
       squares[parseInt(`${sor1}${myvar}`)].classList.remove("anyád");
     }
   }
 }
+
 }
 function canIcolorIt(){ //törli azokat az elemeket, amiken nincsen rajta a class
   squares.forEach(element => {
@@ -37,7 +46,6 @@ function canIcolorIt(){ //törli azokat az elemeket, amiken nincsen rajta a clas
 let myhorizont = 4;
 let myi = 0;
 function slectedarea(){ //az adott elem alatt kijelöli a helyet, ahová esni fog.
-  console.log(myi,myhorizont) 
     if (myi < 20 && squares[parseInt(`${myi}${myhorizont}`)].style.backgroundColor != "black"){
       for (let index = myi; index <20 ; index++) {
         if (squares[parseInt(`${index}${myhorizont}`)].style.backgroundColor != "black"){// csak akor lesz fehér az alatta lévő elemek színe, ha az nem fekete 
