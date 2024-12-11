@@ -30,6 +30,10 @@ function deleterow() {
           squares[r * 10 + c].className = squares[(r - 1) * 10 + c].className;
         }
       }
+      for (let c = 0; c < 10; c++) {
+        squares[c].style.backgroundColor = ""; // háttértörlés biztosítása mindenképp
+        squares[c].className = "";            // classok eltávolítása
+      }
       //folytatja a következő sorral
       sor1++;
     }
@@ -43,8 +47,10 @@ function canIcolorIt(){ //törli azokat az elemeket, amiken nincsen rajta a clas
 })};
 let myhorizont = 4;
 let myi = 0;
-function slectedarea(){ //az adott elem alatt kijelöli a helyet, ahová esni fog.
-    if (myi < 20 && squares[parseInt(`${myi}${myhorizont}`)].style.backgroundColor != "black"){
+function slectedarea(extraleft,extraright){ //az adott elem alatt kijelöli a helyet, ahová esni fog.
+  myhorizont+=extraright;
+  myhorizont-=extraleft;  
+  if (myi < 20 && squares[parseInt(`${myi}${myhorizont}`)].style.backgroundColor != "black"){
       for (let index = myi; index <20 ; index++) {
         if (squares[parseInt(`${index}${myhorizont}`)].style.backgroundColor != "black"){// csak akor lesz fehér az alatta lévő elemek színe, ha az nem fekete 
           squares[parseInt(`${index}${myhorizont}`)].style.backgroundColor = "floralwhite";
@@ -68,7 +74,7 @@ function inovelo(i,horizont){
   if (i < 20 && squares[parseInt(`${i}${horizont}`)].style.backgroundColor != "black"){
     squares[parseInt(`${i}${horizont}`)].style.backgroundColor = "black";
     canIcolorIt();
-    slectedarea();
+    slectedarea(0,0);
     tempi = i;
     tempi++;
   }
@@ -83,18 +89,21 @@ function inovelo(i,horizont){
 //különböző gomblenyomások esetén viselkedés
 function left() {
   if (squares[parseInt(`${i}${horizont-1}`)].style.backgroundColor != "black" && horizont != 0){ //1x ne legyen védett mező, illetve ne is legyen a szélén hogy oldalra menjen.
+    
     horizont -= 1;
-    slectedarea();
+
   canIcolorIt();
   squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black";
+  slectedarea(1,0);
   }
 };
 function right() {
   if (squares[parseInt(`${i}${horizont+1}`)].style.backgroundColor != "black" && horizont!=9){ //ugyan az, csak a másik oldal.
+    
     horizont += 1;
-    slectedarea();
   canIcolorIt();
   squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black";
+  slectedarea(0,1);
   }
 };
 function space() {
