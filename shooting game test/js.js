@@ -15,7 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(target, 3000)
 
 
+
+
     })
+    
 
 });
 
@@ -105,6 +108,7 @@ function shootingChar() {
                     shoot(position); // Trigger shoot action
                     previousAButtonState = true; // Update the previous state to "pressed"
                 }
+
                 // Reset the state when the button is released
                 if (!gamepad.buttons[XboxButtons.D_PAD_LEFT].pressed) {
                     previousDPadLeftState = false;
