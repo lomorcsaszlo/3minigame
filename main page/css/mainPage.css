@@ -10,18 +10,20 @@ body{
     margin: 0 auto;
     margin-top: 25vh;
     max-width: 50%;
+    
 }
 .nes-container{
     background-color: #fff9ef;
-    
+    margin: 0;
+   
 }
 p{
     margin: 0;
 }
-p:hover{
+/* p:hover{
     background-color: #000;
     color: #fff;
-}
+} */
 h5{
     text-align: right;
 }
@@ -34,5 +36,5 @@ h1{
     
 }
 html{
-    cursor: not-allowed;
+    cursor: none;
 }
