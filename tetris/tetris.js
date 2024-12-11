@@ -11,7 +11,7 @@ const StartBtn = document.querySelector("#start-button")
 }
 let squares = document.querySelectorAll(".grid div")
 let i = 0 //19 sor van, ez az sorok száma
-var horizont = 4 //9 oszlop van 
+let horizont = 4 //9 oszlop van 
 let protectedsquares = [];
 
 function canIcolorIt(){ //törli azokat az elemeket, amiken nincsen rajta a class
@@ -20,8 +20,8 @@ function canIcolorIt(){ //törli azokat az elemeket, amiken nincsen rajta a clas
       element.style.backgroundColor = "" //szín reset, de csak ha az a szín még nem ért le.
     }
 })}
-myhorizont = 4
-myi = 0
+let myhorizont = 4;
+let myi = 0;
 function slectedarea(){ //az adott elem alatt kijelöli a helyet, ahová esni fog.
   console.log(myi,myhorizont) 
     if (myi < 20 && squares[parseInt(`${myi}${myhorizont}`)].style.backgroundColor != "black"){
@@ -33,22 +33,17 @@ function slectedarea(){ //az adott elem alatt kijelöli a helyet, ahová esni fo
       myi = i //sorok, oszlopok resetelése
       myhorizont = horizont
     }
-    else{
-      //ez az előző blokk beszínezése miatt kell, fluidabb így
-
-    }
+    
     squares[parseInt(`${i}${myhorizont}`)].style.backgroundColor = "floralwhite"
       myi++
   
-  // if (myi < 20 && squares[parseInt(`${myi}${myhorizont}`)].style.backgroundColor != "black"){
-  //   console.log("wonk")
-  //   squares[parseInt(`${myi}${myhorizont}`)].style.backgroundColor = "black"
-  //   mybool = true
-  //   inovelo(myi,myhorizont,mybool)
-  //   myi++;
-  // } 
 }
-
+function resetposition(){
+  i = 0 //sorok, oszlopok resetelése
+  horizont = 4 
+  myi = 0 //sorok, oszlopok resetelése
+  myhorizont = 4
+}
 //a lefelé mozgás
 function inovelo(i,horizont){
  
@@ -61,10 +56,7 @@ function inovelo(i,horizont){
   else{
     squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black"//ez az előző blokk beszínezése miatt kell, fluidabb így
     squares[parseInt(`${i-1}${horizont}`)].classList.add("anyád")//ez már nem törölhető canicolorit-tel
-    i = 0 //sorok, oszlopok resetelése
-    horizont = 4 
-    myi = 0 //sorok, oszlopok resetelése
-    myhorizont = 4
+    resetposition()
   }
   
   squares[parseInt(`${i}${horizont}`)].style.backgroundColor = "black"
@@ -91,22 +83,17 @@ function right() {
   squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black"
   }
 }
-function down() {
-  i = inovelo(i, horizont);
-  
-}
+
 function space() {
   while((i < 20 && squares[parseInt(`${i}${horizont}`)].style.backgroundColor != "black")){
     i = inovelo(i, horizont)
-   
   }
   i = inovelo(i, horizont)
-  
+  resetposition()
 }
 document.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowLeft') left();
   if (event.key === 'ArrowRight') right();
-  if (event.key === 'ArrowDown') down();
   if (event.key === ' ') space();
 });
 document.addEventListener('click', () => {
@@ -116,7 +103,5 @@ document.addEventListener('click', () => {
 
 setInterval(() => {
   i = inovelo(i, horizont);//folyamatos futás 
-  
-  
 }, mytime);
 })
