@@ -12,21 +12,28 @@ let horizont = 4; //9 oszlop van
 const ScoreDisplay = document.querySelector("#score");
 const StartBtn = document.querySelector("#start-button");
 
-function deleterow(){
-  let tempcount = 0;
-  for (let sor1 = 0; sor1 < 20; sor1++) {
-  for (let oszlop = 0; oszlop < 10; oszlop++) {
-    if (squares[parseInt(`${sor1}${oszlop}`)].style.backgroundColor == "black"){
-      tempcount +=1;
+function deleterow() {
+  for (let sor1 = 19; sor1 >= 0; sor1--) { // Az alsó sortól felfelé csekkol
+    let isFullRow = true;
+    // megnézi megvan e az egész sor
+    for (let oszlop = 0; oszlop < 10; oszlop++) {
+      if (squares[sor1 * 10 + oszlop].style.backgroundColor !== "black") {
+        isFullRow = false;
+        break;
+      }
+    }
+    // Ha egy sor kigyűlik akkor eltávolítja
+    if (isFullRow) {
+      for (let r = sor1; r > 0; r--) {
+        for (let c = 0; c < 10; c++) {
+          squares[r * 10 + c].style.backgroundColor = squares[(r - 1) * 10 + c].style.backgroundColor;
+          squares[r * 10 + c].className = squares[(r - 1) * 10 + c].className;
+        }
+      }
+      //folytatja a következő sorral
+      sor1++;
     }
   }
-  if (tempcount == 11){
-    for (let myvar = 0; myvar < 10; myvar++) {
-      squares[parseInt(`${sor1}${myvar}`)].style.backgroundColor == "";
-      squares[parseInt(`${sor1}${myvar}`)].classList.remove("anyád");
-    }
-  }
-}
 }
 function canIcolorIt(){ //törli azokat az elemeket, amiken nincsen rajta a class
   squares.forEach(element => {
@@ -37,7 +44,6 @@ function canIcolorIt(){ //törli azokat az elemeket, amiken nincsen rajta a clas
 let myhorizont = 4;
 let myi = 0;
 function slectedarea(){ //az adott elem alatt kijelöli a helyet, ahová esni fog.
-  console.log(myi,myhorizont) 
     if (myi < 20 && squares[parseInt(`${myi}${myhorizont}`)].style.backgroundColor != "black"){
       for (let index = myi; index <20 ; index++) {
         if (squares[parseInt(`${index}${myhorizont}`)].style.backgroundColor != "black"){// csak akor lesz fehér az alatta lévő elemek színe, ha az nem fekete 
@@ -117,8 +123,9 @@ grid.addEventListener('click', () => {
 
 setInterval(() => {
   if (clicked == true){
-  i = inovelo(i, horizont);//folyamatos futás 
   deleterow();
+  i = inovelo(i, horizont);//folyamatos futás 
+  
 }
 }, mytime);
 })
