@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    
     const start = document.querySelector(".start")
     const stop = document.querySelector(".stop")
     const main = document.querySelector('main');
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         /*         stop.style.display = "inline" */
         shootingChar();
         setInterval(target, 3000)
+        displayBall()
         assaultTheme.play()
         assaultTheme.volume = 0.4
 
@@ -24,10 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+function displayBall(){
+    const ball = document.querySelectorAll(".b")
+    for(let i = 0; i < ball.length; i++){
+        ball[i].style.display = "block"
+    }
+}
+
 function shootingChar() {
     const counter = document.querySelector(".score")
+    const bulletsC = document.querySelector(".bullets")
     var points = 0;
     let position = 780;
+    var bullets = 12;
     const pixels = document.querySelectorAll("main div");
 
     pixels[position].style.backgroundColor = "white";
@@ -50,7 +60,7 @@ function shootingChar() {
     });
 
     document.addEventListener("keydown", function (event) {
-        if (event.key === ' ') {
+        if (event.key === ' ' && bullets != 0) {
             shoot(position);
             
         }
@@ -133,6 +143,8 @@ function shootingChar() {
 
     function shoot(startPos) {
         let shootPos = startPos - 40;
+        bullets -= 1;
+        bulletsC.innerHTML = `Bullets: ${bullets}`
         setInterval(function () {
             if (shootPos >= 0) {
                 pixels[shootPos].style.backgroundColor = "black";
@@ -141,6 +153,10 @@ function shootingChar() {
                     if (pixels[shootPos].style.backgroundColor === "blue") {
                         points += 1;
                         counter.innerHTML = points
+                        if(points % 10 == 0){
+                            bullets += 12;
+                            bulletsC.innerHTML = `Bullets: ${bullets}`
+                        }
                         
                         shipExpoltano.play()
                     }
@@ -149,7 +165,11 @@ function shootingChar() {
             }
         }, 100);
     }
+    
 }
+
+
+
 
 function target() {
 
