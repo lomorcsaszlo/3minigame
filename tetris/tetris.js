@@ -120,11 +120,12 @@ function right() {
   }
 };
 function space() {
+  if (clicked == true){//csak akkor működik a space, ha fut a gameszkó
   while((i < 20 && squares[parseInt(`${i}${horizont}`)].style.backgroundColor != "black")){
     i = inovelo(i, horizont)
   }
   i = inovelo(i, horizont);
-  resetposition();
+  resetposition();};
 };
 let clicked = false;
 
@@ -140,7 +141,8 @@ document.addEventListener('keydown', (event) => {
   if (event.key === ' ') space();
 });
 grid.addEventListener('click', () => {
-  space(); // Mouse click
+  space();
+   // Mouse click
 });
 
 setInterval(() => {
