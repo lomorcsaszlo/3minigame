@@ -39,10 +39,23 @@ function deleterow() {
     }
   }
 }
+function youlose(){
+  squares.forEach(element => {
+    element.style.backgroundColor = ""; //szín reset, de csak ha az a szín még nem ért le.
+    element.classList.remove("anyád");
+})
+StartBtn.classList.remove("hidden");
+alert("Game Over!")
+};
+  
 function canIcolorIt(){ //törli azokat az elemeket, amiken nincsen rajta a class
   squares.forEach(element => {
     if (!element.classList.contains("anyád")){
       element.style.backgroundColor = ""; //szín reset, de csak ha az a szín még nem ért le.
+      if (squares[parseInt(`${1}${myhorizont}`)].classList.contains("anyád")){
+        clicked = false;
+        youlose();
+      }
     }
 })};
 let myhorizont = 4;
