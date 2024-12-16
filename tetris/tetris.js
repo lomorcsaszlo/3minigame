@@ -11,6 +11,13 @@ let i = 0; //19 sor van, ez az sorok száma
 let horizont = 4; //9 oszlop van 
 const ScoreDisplay = document.querySelector("#score");
 const StartBtn = document.querySelector("#start-button");
+let scorecount = 25;
+let rowclearpoints = 125;
+
+function makescorebigger(numbertomakebigger){
+  ScoreDisplay.innerHTML = `${(parseInt(ScoreDisplay.innerHTML,10)+numbertomakebigger).toString()}`
+}
+
 
 function deleterow() {
   for (let sor1 = 19; sor1 >= 0; sor1--) { // Az alsó sortól felfelé csekkol
@@ -32,8 +39,9 @@ function deleterow() {
       }
       for (let c = 0; c < 10; c++) {
         squares[c].style.backgroundColor = ""; // háttértörlés biztosítása mindenképp
-        squares[c].className = "";            // classok eltávolítása
+        squares[c].classList.remove("anyád");            // classok eltávolítása
       }
+      makescorebigger(rowclearpoints);
       //folytatja a következő sorral
       sor1++;
     }
@@ -94,6 +102,7 @@ function inovelo(i,horizont){
   else{
     squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black";//ez az előző blokk beszínezése miatt kell, fluidabb így
     squares[parseInt(`${i-1}${horizont}`)].classList.add("anyád");//ez már nem törölhető canicolorit-tel
+    makescorebigger(scorecount)//növelem a pontszámot, ha leérkezik a blokk 25-tel
     resetposition()
   }
   squares[parseInt(`${i}${horizont}`)].style.backgroundColor = "black";
