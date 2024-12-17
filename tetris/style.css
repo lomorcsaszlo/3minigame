@@ -5,6 +5,7 @@
 body{
     /* background-image: url("/images/background2.jpg"); */
     background-color: black;
+    text-align: center;
 }
 #scoreh3{
     text-align: center;
@@ -30,6 +31,7 @@ body{
 .hidden{
     display: none;
 }
+
 #start-button{
     text-align: center;
     padding: 0.7rem;
@@ -47,3 +49,4 @@ body{
     top: 0;
     left: 0;
 }
+

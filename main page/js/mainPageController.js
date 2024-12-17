@@ -46,6 +46,7 @@ function pollGamepad() {
       }
       else if (gamepad.buttons[XboxButtons.A].pressed && !previousAState) {
         window.open(opens[count]);
+        opengame.play()
         previousAState = true; // Update the previous state to "pressed"
       }
       // Reset the state when the button is released

@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <script src="clickApp.js" defer></script>
+    <script src="keyboardControl.js" defer></script>
     <title>Circle Rush</title>
 </head>
 <body>
@@ -44,9 +45,9 @@
         </div>
         <div class="textIGuess">
             <h4 id="HS"></h4>
-            <h4 class="paste">Copy my High Score!</h4>
-            <h4 class="leader">Leaderboard</h4>
-            <h4 class="exit">Exit Game</h4>
+            <h4 class="paste selectable">Copy my High Score!</h4>
+            <h4 class="leader selectable">Leaderboard</h4>
+            <h4 class="exit selectable">Exit Game</h4>
         </div>
 
 
@@ -97,6 +98,10 @@
             text-align: center;
             width: 50%;
             margin: 0 auto;
+        }
+        .textIGuess h4{
+            margin: 0 auto;
+            max-width: 50%;
         }
         .but{
             text-align: center;

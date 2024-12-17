@@ -1,6 +1,17 @@
 var count = 0;
 const pk = document.querySelectorAll(".nes-container p");
+const main = new Audio('../musics/MainTheme1.mp3');
 
+document.addEventListener("DOMContentLoaded", function() {
+    main.muted = true;
+    main.play()
+        .then(() => {
+            main.muted = false;
+        })
+        .catch((error) => {
+            console.error('Autoplay failed:', error);
+        });
+}); 
 // Store the original text of each element
 const originalText = Array.from(pk).map(element => element.textContent);
 
@@ -35,16 +46,23 @@ function cont() {
         }
         else if (event.key === ' ' || event.key === 'Enter') {
             window.open(opens[count]);
+            main.pause()
+            opengame.play()
+
         }
     });
 }
 
 function up() {
     count--;
+    click.currentTime = 0;
+    click.play()
 }
 
 function down() {
     count++;
+    click.currentTime = 0;
+    click.play()
 }
 
 // Initialize selection
@@ -53,5 +71,9 @@ cont();
 
 // URLs to open when a list item is selected
 const opens = ["../tetris/tetris.html", "../clicking/opening.html", "../shooting game test/html.html", "../mastermind"];
+function playTheme(){
+    
+}
 
-//controller support
+
+
