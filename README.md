@@ -24,21 +24,22 @@ Controls:
 
 ## Mastermind game
 this game's goal is to guess a combination based on the colors of the balls and the order of them. it is based on the infamous game called Színözön, as if it was rewinded back to the 80s.
-**controls**
+**Controls**
 click on the color of the ball listed in the right column to input it. you have to guess four colors.
 black peg next to the color combination: the color is guessed correctly, and it is in the right hole.
 white peg next to the color combination: the color is guessed correctly, but it is in the wrong hole.
 
-## Shooting Game
-In this game the goal is to shoot as much blue targets as possible. New target appearing in every 3 seconds.
+## Pixel assault
+In this game the goal is to shoot as much blue targets as possible. New target appearing in every 3 seconds. At the start, you have 12 bullets, and you get another 12 at every 10 target. The goal of this game is to earn the most points as possible without lose all bullets. 
 **Controls**:
 - **A**: move the shooter left
 - **D**: move the shooter right
 - **Space**: shoot :)
 
-## Clicking Game
+## Circle Rush
 **In this game the goal is to click more targets in 10 seconds.**  
-There's also a cute leaderboard just for fun, it doesn't really have a function
+The circles randomly apperaing in the screen for 10 seconds, in this time, we ought to shoot them as fast as possible. If we are unable to shoot them the clock will run out.
+On the leaderboard our name will appear as soon as we finish the first game.
 
 
 
@@ -71,13 +72,18 @@ A játék célja, hogy kitalálj egy kombinációt a golyók színei és azok so
 **Irányítás**
 Kattints a jobb oldali oszlopban felsorolt színű golyóra, hogy beírd azt. Négy színt kell kitalálnod. Fekete golyó az színkombináció mellett: a szín helyesen lett kitalálva, és a megfelelő helyre került. Fehér golyó a színkombináció mellett: a szín helyesen lett kitalálva, de nem került a megfelelő helyre.
 
-## Lövöldözős Játék
+## Pixel Assault játék
 Ebben a játékban a cél, hogy minél több kék célt lőj le. Minden 3 másodpercben új cél jelenik meg.  
 **Irányítás**:
 - **A**: A lövő balra mozgása  
 - **D**: A lövő jobbra mozgása  
 - **Space**: Lőj :)
 
-## Kattintós Játék
-**Ebben a játékban a cél, hogy minél több célt kattints meg 10 másodperc alatt.**  
-Van egy aranyos ranglista is, ami csak szórakozásból van, nincs igazi funkciója.
+## Circle Rush játék
+
+**In this game the goal is to click more targets in 10 seconds.**  
+The circles randomly appearing on the screen for 10 seconds, and during this time, we ought to shoot them as fast as possible. If we are unable to shoot them, the clock will run out.  
+On the leaderboard, our name will appear as soon as we finish the first game.
+
+**Controls:**
+- **Mouse Click**: Click on the circles to score points.
