@@ -108,7 +108,7 @@ function createLShape(i, horizont) {
 }
 
 
-myshape = generateNewShape()//ez az alakzat
+
 
 
 /////////////////////////////////////////////////

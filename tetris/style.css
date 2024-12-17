@@ -11,7 +11,7 @@ body{
     text-align: center;
     padding: 1rem;
     border: 1px solid black;
-    width: 200px;
+    width: 250px;
     margin: 1rem auto;
     height: 6vh;
     background-color: blueviolet;
@@ -40,8 +40,8 @@ body{
     margin: 1rem auto;
     height: 4.9vh;
     position: absolute;
-    top: 50rem;
-    left: 54rem;
+    top: 2rem;
+    left: 1rem;
     background-color: blueviolet;
 }
 #max_score_h3{
