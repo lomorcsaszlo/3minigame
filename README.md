@@ -1,7 +1,7 @@
 # 🔴⚪🔵Αρκαδία🔵⚪🔴
 
 Welcome to Αρκαδία!
-Αρκαδία is a to relive the 80's with retro style games.
+The main idea of this site is to make a retro-styled website with fun games
 
 ## About the Games
 
@@ -40,13 +40,15 @@ In this game the goal is to shoot as much blue targets as possible. New target a
 **In this game the goal is to click more targets in 10 seconds.**  
 The circles randomly apperaing in the screen for 10 seconds, in this time, we ought to shoot them as fast as possible. If we are unable to shoot them the clock will run out.
 On the leaderboard our name will appear as soon as we finish the first game.
+**Controls:**
+- **Mouse Click**: Click on the circles to score points!
 
 
 
 # 🔴⚪🟢Αρκαδία🟢⚪🔴
 
 Üdvözlünk az **Αρκαδία** világában!
-Az **Αρκαδία** célja, hogy újraéldd a 80-as éveket retro stílusú játékokkal.
+A weboldal fő ötlete egy retro stílusú weboldal létrehozása szórakoztató játékokkal.
 
 ## A Játékokról
 
@@ -81,9 +83,8 @@ Ebben a játékban a cél, hogy minél több kék célt lőj le. Minden 3 másod
 
 ## Circle Rush játék
 
-**In this game the goal is to click more targets in 10 seconds.**  
-The circles randomly appearing on the screen for 10 seconds, and during this time, we ought to shoot them as fast as possible. If we are unable to shoot them, the clock will run out.  
-On the leaderboard, our name will appear as soon as we finish the first game.
+A körök véletlenszerűen jelennek meg a képernyőn 10 másodpercig, és ebben az időben minél gyorsabban kell eltalálni őket. Ha nem sikerül eltalálni őket, az óra lejár.
+A ranglistán a neved akkor jelenik meg, amint befejezed az első játékot.
 
-**Controls:**
-- **Mouse Click**: Click on the circles to score points.
+**Irányítsok:**
+- **Egér Kattintás**: Kattints a körökre, hogy pontokat szerezz!
