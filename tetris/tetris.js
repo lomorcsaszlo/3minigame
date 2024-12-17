@@ -10,6 +10,7 @@ let squares = document.querySelectorAll(".grid div");
 let i = 0; //19 sor van, ez az sorok száma
 let horizont = 4; //9 oszlop van 
 const ScoreDisplay = document.querySelector("#score");
+const maxScore = document.querySelector("#max_score")
 const StartBtn = document.querySelector("#start-button");
 let scorecount = 25;
 let rowclearpoints = 125;
@@ -18,7 +19,10 @@ function makescorebigger(numbertomakebigger){
   ScoreDisplay.innerHTML = `${(parseInt(ScoreDisplay.innerHTML,10)+numbertomakebigger).toString()}`
 }
 
-
+function pointreset(){
+  maxScore.innerHTML = `${(parseInt(ScoreDisplay.innerHTML,10)).toString()}`
+  ScoreDisplay.innerHTML = "0";
+}
 function deleterow() {
   for (let sor1 = 19; sor1 >= 0; sor1--) { // Az alsó sortól felfelé csekkol
     let isFullRow = true;
@@ -54,6 +58,7 @@ function youlose(){
 })
 StartBtn.classList.remove("hidden");
 alert("Game Over!")
+pointreset();
 };
   
 function canIcolorIt(){ //törli azokat az elemeket, amiken nincsen rajta a class

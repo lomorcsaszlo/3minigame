@@ -42,3 +42,8 @@ body{
     left: 54rem;
     background-color: blueviolet;
 }
+#max_score_h3{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
