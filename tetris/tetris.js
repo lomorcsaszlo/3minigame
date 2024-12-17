@@ -17,6 +17,7 @@ let rowclearpoints = 125;
 
 function makescorebigger(numbertomakebigger){
   ScoreDisplay.innerHTML = `${(parseInt(ScoreDisplay.innerHTML,10)+numbertomakebigger).toString()}`
+  
 }
 
 function pointreset(){
@@ -113,6 +114,8 @@ myshape = generateNewShape()//ez az alakzat
 
 /////////////////////////////////////////////////
 //end of shapes
+
+
 function deleterow() {
   for (let sor1 = 19; sor1 >= 0; sor1--) { // Az alsó sortól felfelé csekkol
     let isFullRow = true;

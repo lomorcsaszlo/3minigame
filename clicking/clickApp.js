@@ -103,11 +103,6 @@ function highScore() {
     paste.style.display = "block";
 }
 
-
-
-
-
-
 function copyHS(){
     const pasteHs =  document.querySelector(".paste")
     pasteHs.addEventListener("click", function(){
