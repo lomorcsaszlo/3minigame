@@ -206,9 +206,7 @@ function inovelo(i,horizont){
 //különböző gomblenyomások esetén viselkedés
 function left() {
   if (squares[parseInt(`${i}${horizont-1}`)].style.backgroundColor != "black" && horizont != 0){ //1x ne legyen védett mező, illetve ne is legyen a szélén hogy oldalra menjen.
-    
     horizont -= 1;
-
   canIcolorIt();
   squares[parseInt(`${i-1}${horizont}`)].style.backgroundColor = "black";
   slectedarea(1,0);
