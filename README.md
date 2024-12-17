@@ -13,6 +13,11 @@ The are four types of games:
 - Clicking Game
 
 ## Tetris
+This game is similar to the Tetris game. The goal is to make a row full of objects. Every block gives you 25 points, and every full row 100 points. The goal is to have the most points as possible.
+Controls:
+- **Left/Right Arrow**: moves the block to the given direction
+- **Space**: Directly puts the object to the last row.
+- 
 
 
 
@@ -51,7 +56,14 @@ Négyféle játék található:
 - Lövöldözős Játék
 - Kattintós Játék
 
-## Tetris
+##Tetris
+
+Ez a játék hasonló a Tetris játékhoz. A cél, hogy egy teljes sort hozz létre a blokkokból. Minden egyes blokk 25 pontot ér, és minden teljes sor 100 pontot ad. A cél, hogy minél több pontot szerezz.
+
+**Vezérlés:**
+- **Bal/Jobb nyíl**: A blokkot a megadott irányba mozgatja.
+- **Space**: Az objektumot közvetlenül a legalsó sorba helyezi.
+
 
 ## Mastermind Játék
 A játék célja, hogy kitalálj egy kombinációt a golyók színei és azok sorrendje alapján. Az ismert Színözön nevű játékra épül, mintha visszatekertük volna az időt az 1980-as évekbe.
