@@ -23,6 +23,96 @@ function pointreset(){
   maxScore.innerHTML = `${(parseInt(ScoreDisplay.innerHTML,10)).toString()}`
   ScoreDisplay.innerHTML = "0";
 }
+//////////////////////////////////////////////////
+//shapes
+
+function generateNewShape() {
+  // Példa: véletlenszerű alakzat választása
+  const randomShape = Math.floor(Math.random() * 7);
+  switch (randomShape) {
+      case 0:
+          createZShape(i, horizont);
+          return createZShape
+          break;
+      case 1:
+          createTShape(i, horizont);
+          return createTShape
+          break;
+      case 2:
+          createSShape(i, horizont);
+          return createSShape
+          break;
+      case 3:
+          createJShape(i, horizont);
+          return createJShape
+          break;
+      case 4:
+          createLShape(i, horizont);
+          return createLShape
+          break;
+      case 5:
+          createIShape(i, horizont);
+          return createIShape
+          break;
+      case 6:
+          createOShape(i, horizont);
+          return createOShape
+          break;
+    
+  }
+}function createIShape(i, horizont) {
+  for (let row = 0; row < 4; row++) {
+      squares[parseInt(`${i + row}${horizont}`)].style.backgroundColor = "black";
+  }
+}
+
+function createOShape(i, horizont) {
+  squares[parseInt(`${i}${horizont}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i}${horizont + 1}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont + 1}`)].style.backgroundColor = "black";
+}
+
+function createTShape(i, horizont) {
+  squares[parseInt(`${i}${horizont}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i}${horizont + 1}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i}${horizont + 2}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont + 1}`)].style.backgroundColor = "black";
+}
+
+function createSShape(i, horizont) {
+  squares[parseInt(`${i}${horizont + 1}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i}${horizont + 2}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont + 1}`)].style.backgroundColor = "black";
+}
+function createZShape(i, horizont) {
+  squares[parseInt(`${i}${horizont}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i}${horizont + 1}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont + 1}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont + 2}`)].style.backgroundColor = "black";
+}
+
+function createJShape(i, horizont) {
+  squares[parseInt(`${i}${horizont}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont + 1}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont + 2}`)].style.backgroundColor = "black";
+}
+
+function createLShape(i, horizont) {
+  squares[parseInt(`${i}${horizont + 2}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont + 1}`)].style.backgroundColor = "black";
+  squares[parseInt(`${i + 1}${horizont + 2}`)].style.backgroundColor = "black";
+}
+
+
+myshape = generateNewShape()//ez az alakzat
+
+
+/////////////////////////////////////////////////
+//end of shapes
 function deleterow() {
   for (let sor1 = 19; sor1 >= 0; sor1--) { // Az alsó sortól felfelé csekkol
     let isFullRow = true;
