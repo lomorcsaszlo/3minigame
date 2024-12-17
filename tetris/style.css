@@ -31,3 +31,22 @@ body{
 .hidden{
     display: none;
 }
+
+#start-button{
+    text-align: center;
+    padding: 0.7rem;
+    border: 1px solid black;
+    width: 12rem;
+    margin: 1rem auto;
+    height: 4.9vh;
+    position: absolute;
+    top: 50rem;
+    left: 54rem;
+    background-color: blueviolet;
+}
+#max_score_h3{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
