@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid');
   const mytime = 380;
   for (let i = 0; i < 200; i++) {
-    const div = document.createElement('div');  // Create a diveket
+    const div = document.createElement('div');  // Divek kreálása
     grid.appendChild(div);
     div.style.border = "1px solid black";
   }
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //shapes
 
   function generateNewShape() {
-    // Példa: véletlenszerű alakzat választása
+    //véletlenszerű alakzat választása
     const randomShape = Math.floor(Math.random() * 4);
     switch (randomShape) {
       case 0:
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     squares[parseInt(`${i + 1}${horizont + 2}`)].style.backgroundColor = "black";
   }
 
- 
+ //különböző alakok deklarálása
 
 
   myshape = generateNewShape()
