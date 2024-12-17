@@ -24,9 +24,11 @@ body{
 .grid div{
     background-color: blue;
 }
-.hidden{
+.hidden{ 
+    
     display: none;
 }
+
 
 
 
