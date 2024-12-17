@@ -17,7 +17,7 @@ This game is similar to the Tetris game. The goal is to make a row full of objec
 Controls:
 - **Left/Right Arrow**: moves the block to the given direction
 - **Space**: Directly puts the object to the last row.
-- 
+
 
 
 
@@ -56,7 +56,7 @@ Négyféle játék található:
 - Lövöldözős Játék
 - Kattintós Játék
 
-##Tetris
+## Tetris
 
 Ez a játék hasonló a Tetris játékhoz. A cél, hogy egy teljes sort hozz létre a blokkokból. Minden egyes blokk 25 pontot ér, és minden teljes sor 100 pontot ad. A cél, hogy minél több pontot szerezz.
 
