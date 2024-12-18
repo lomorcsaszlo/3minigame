@@ -33,6 +33,14 @@ On the leaderboard our name will appear as soon as we finish the first game.
 **Controls:**
 - **Mouse Click**: Click on the circles to score points!
 
+##mastermind##
+A game that takes you back to the 80s! figure the color combination out and win the game. the peg at the side can help you figure the combination out! you win when all 4 colors get in the right position.
+##controls##
+clicking on a color: chooses that color
+hitting 'confirm': inputs that color and analyzes it based on the secret code
+white peg: the colors are correct, but they are not in the correct position
+black peg: both the color and the position are correct.
+
 
 
 # 🔴⚪🟢Αρκαδία🟢⚪🔴
@@ -57,7 +65,14 @@ Ez a játék hasonló a Tetris játékhoz. A cél, hogy egy teljes sort hozz lé
 - **Bal/Jobb nyíl**: A blokkot a megadott irányba mozgatja.
 - **Space**: Az objektumot közvetlenül a legalsó sorba helyezi.
 
+##Színözön##  
+Egy játék, amely visszarepít az 1980-as évekbe! Találd ki a színkombinációt, és nyerd meg a játékot. Az oldalsó pöcök segít kitalálni a kombinációt! Akkor nyersz, ha mind a 4 szín a megfelelő helyre kerül.
 
+##Irányítás##  
+Színre kattintás: kiválasztja azt a színt.  
+„Megerősítés” gomb: beviszi a színt, és elemzi a titkos kód alapján.  
+Fehér pöcök: a színek helyesek, de nincsenek a megfelelő pozícióban.  
+Fekete pöcök: a szín és a pozíció is helyes.
 
 
 ## Pixel Assault játék
