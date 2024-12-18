@@ -70,7 +70,7 @@ buttonSelect();
 cont();
 
 // URLs to open when a list item is selected
-const opens = ["../tetris/openingT.html", "../clicking/opening.html", "../shooting game test/openingSG.html"];
+const opens = ["../tetris/openingT.html", "../clicking/opening.html", "../shooting game test/openingSG.html", "../mastermind/openingMM.html"];
 function playTheme(){
     
 }
