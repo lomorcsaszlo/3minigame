@@ -9,13 +9,14 @@ body{
 }
 #scoreh3{
     text-align: center;
-    width: 200px;
+    width: 250px;
+    padding: 0;
     margin: 0 auto;
 }
 .grid{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    height: 90vh;
+    height: 80vh;
     width: 50vh;
     margin:  auto;
     color: white;
@@ -28,7 +29,13 @@ body{
     
     display: none;
 }
+#start-button{
+    margin:auto ;
+    top: -3rem;
+}
 
-
+#max_score_h3{
+    margin: 0;
+}
 
 
