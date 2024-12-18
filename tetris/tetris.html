@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="../images/corsola-modified.png" type="image/x-icon">
     <title>Tetris</title>
     <link rel="stylesheet" href="style.css">
     <script src="tetris.js" defer></script>
+    <script src="openingT.js" defer></script>
 
 </head>
 <body>
 
-    <h3 id="scoreh3">Score: <span id="score" >0</span></h3>
+
+    <h4 id="scoreh3" class="nes-container">Score: <span id="score" >0</span></h4>
+
+
+    <h4 id="max_score_h3" class="nes-container">High Score: <span id="max_score">0</span></h4>
+    <button type="button" class="nes-btn is-error" id="start-button">Start Game</button>
+
+    
+
     <div class="grid">
 
 
     </div>
-    <h3  id="start-button">Start</h3>
+    
 </body>
 </html>

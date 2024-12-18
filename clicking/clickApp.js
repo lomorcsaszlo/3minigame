@@ -103,13 +103,13 @@ function highScore() {
     paste.style.display = "block";
 }
 
-
-
-
-const pasteHs =  document.querySelector(".paste")
-pasteHs.addEventListener("click", function(){
+function copyHS(){
+    const pasteHs =  document.querySelector(".paste")
+    pasteHs.addEventListener("click", function(){
     navigator.clipboard.writeText("My high score is: " + localStorage.getItem("High Score"))
 })
+}
+copyHS()
 
 function playsong(){
     song = document.getElementById("song")
@@ -129,6 +129,7 @@ function leaderBoard(){
     const maingame = document.querySelector(".box")
     leaderbut.addEventListener("click", function(){
         if(leaderboard.style.display === "none"){
+            leaderboardDisplay()
             leaderboard.style.display = "block"
             startBut.style.display = "none"
             maingame.style.display = "none"
@@ -144,22 +145,30 @@ function leaderBoard(){
     })
 }
 
-function leaderboardDisplay(){
-    const leaders = document.querySelectorAll(".leaderboard p")
-    const leaderB = document.querySelectorAll(".leaderboard")
-    for(let i = 0; i < leaders.length; i++){
-        if (leaders[i].innerHTML.slice(-2) < localStorage.getItem("High Score") ){
-            /* const p = document.createElement("p");
-            p.innerHTML = "You";
-            leaders.appendChild(p); */
+function leaderboardDisplay() {
+    const hs = localStorage.getItem("High Score");
+    const leaders = document.querySelectorAll(".leaderboard p");
+    const leaderB = document.querySelector(".leaderboard");
+
+    for (let i = 0; i < leaders.length; i++) {
+        const currentScore = parseInt(leaders[i].innerHTML.slice(-2));
+
+        if (currentScore < hs) {
+            const newLeader = document.createElement("p");
+            newLeader.textContent = `Your High Score - ${hs}`;
+            
+            if (i === 0) {
+                leaderB.insertBefore(newLeader, leaders[i]);
+            } else {
+                leaderB.insertBefore(newLeader, leaders[i]);
+            }
+            break;
         }
     }
-    
 }
-leaderboardDisplay()
+
 
 
 
 
 leaderBoard()
-

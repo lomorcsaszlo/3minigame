@@ -1,0 +1,41 @@
+*{box-sizing: border-box; margin: 0; padding: 0;}
+.board{
+    background-color: #703a28;
+    width: 50vh;
+    height: 95vh;
+    margin: 1rem auto;
+}
+.select{
+    display: flex;
+
+}
+.answer{
+    width: 100%;
+    height: 10vh;
+    border: 2px solid black;
+}
+.button{
+    width: 30%;
+    height: 100%;
+    background-color: #48251a;
+    border: 2px solid rgb(150, 65, 65);
+
+}
+h3{
+    text-align: justify;
+    padding: 1rem;
+}
+.guess{
+    width: 100%;
+    height: 10vh;
+}
+.guess-row{
+    height: 20vh;
+    width: 100%;
+    border: 2px solid rgb(30, 19, 19);
+}
+.select{
+    width: 100%;
+    height: 10vh;
+    border: 2px solid rgb(30, 19, 19);
+}

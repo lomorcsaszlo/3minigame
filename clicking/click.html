@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../images/gallade-modified.png" type="image/x-icon">
     <script src="clickApp.js" defer></script>
+    <script src="keyboardControl.js" defer></script>
     <title>Circle Rush</title>
 </head>
 <body>
@@ -44,9 +46,9 @@
         </div>
         <div class="textIGuess">
             <h4 id="HS"></h4>
-            <h4 class="paste">Copy my High Score!</h4>
-            <h4 class="leader">Leaderboard</h4>
-            <h4 class="exit">Exit Game</h4>
+            <h4 class="paste selectable">Copy my High Score!</h4>
+            <h4 class="leader selectable">Leaderboard</h4>
+            <h4 class="exit selectable">Exit Game</h4>
         </div>
 
 
@@ -95,8 +97,12 @@
         }
         .textIGuess{
             text-align: center;
-            width: 50%;
+            width: 60%;
             margin: 0 auto;
+        }
+        .textIGuess h4{
+            margin: 0 auto;
+            max-width: 50%;
         }
         .but{
             text-align: center;

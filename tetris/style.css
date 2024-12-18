@@ -5,15 +5,12 @@
 body{
     /* background-image: url("/images/background2.jpg"); */
     background-color: black;
+    text-align: center;
 }
 #scoreh3{
     text-align: center;
-    padding: 1rem;
-    border: 1px solid black;
     width: 200px;
-    margin: 1rem auto;
-    height: 6vh;
-    background-color: blueviolet;
+    margin: 0 auto;
 }
 .grid{
     display: grid;
@@ -27,18 +24,11 @@ body{
 .grid div{
     background-color: blue;
 }
-.hidden{
+.hidden{ 
+    
     display: none;
 }
-#start-button{
-    text-align: center;
-    padding: 0.7rem;
-    border: 1px solid black;
-    width: 12rem;
-    margin: 1rem auto;
-    height: 4.9vh;
-    position: absolute;
-    top: 50rem;
-    left: 54rem;
-    background-color: blueviolet;
-}
+
+
+
+
