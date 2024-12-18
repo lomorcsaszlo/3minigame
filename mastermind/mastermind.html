@@ -5,35 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/mastermind.css">
+    <link rel="shortcut icon" href="../images/deerlingC favI.png" type="image/x-icon">
     <script src="./js/mastermind.js" defer></script>
     <script src="./openMM.js" defer></script>
     <title>Mastermind game</title>
 </head>
 <body>
-    <audio id="song" src="BCKsong.mp3"></audio>
-        <div class="tools">
-            <div class="mainBoard">
-                <div class="secret">
-                    <div class="secretCode" id="secretCode1"></div>
-                    <div class="secretCode" id="secretCode2"></div>
-                    <div class="secretCode" id="secretCode3"></div>
-                    <div class="secretCode" id="secretCode4"></div>
-                </div>
-                <div class="colors">
-                    <p></p>
-                    <div class="color" id="red"></div>
-                    <div class="color" id="orange"></div>
-                    <div class="color" id="yellow"></div>
-                    <div class="color" id="green"></div>
-                    <div class="color" id="blue"></div>
-                    <div class="color" id="purple"></div>
-                    <div class="color" id="pink"></div>
-                    <div class="color" id="white"></div>
-                </div>
-                <div class="pegs"></div>
-                <div class="board"></div>
-                <div class="submit">Submit</div>
+    <div class="board">
+        <div class="answer contain">
+            <div class="answer-box">
+
+            </div>
+            <div class="answer"></div>
+            <div class="button">
+                <H3>Submit</H3>
             </div>
         </div>
+        <div class="guess conatin">
+            <div class="guess-row"></div>
+            <div class="guess-pegs"></div>
+            <div class="grading-peg"></div>
+        </div>
+        <div class="select contain">
+
+        </div>
+    </div>
 </body>
 </html>
