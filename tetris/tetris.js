@@ -293,9 +293,7 @@ function pollGamepad() {
         if (gamepad) {
             // Handle D-Pad left (a key)
             if (gamepad.buttons[XboxButtons.D_PAD_LEFT].pressed && !previousDPadLeftState) {
-                
                 left();
-                
                 previousDPadLeftState = true; // Update the previous state to "pressed"
             }
             // Handle D-Pad right (d key)
