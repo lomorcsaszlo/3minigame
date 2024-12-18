@@ -19,9 +19,6 @@ Controls:
 - **Space**: Directly puts the object to the last row.
 
 
-
-
-
 ## Mastermind game
 this game's goal is to guess a combination based on the colors of the balls and the order of them. it is based on the infamous game called Színözön, as if it was rewinded back to the 80s.
 **Controls**
@@ -29,7 +26,7 @@ click on the color of the ball listed in the right column to input it. you have 
 black peg next to the color combination: the color is guessed correctly, and it is in the right hole.
 white peg next to the color combination: the color is guessed correctly, but it is in the wrong hole.
 
-## Pixel assault
+## Pixel assault 
 In this game the goal is to shoot as much blue targets as possible. New target appearing in every 3 seconds. At the start, you have 12 bullets, and you get another 12 at every 10 target. The goal of this game is to earn the most points as possible without lose all bullets. 
 **Controls**:
 - **A**: move the shooter left
