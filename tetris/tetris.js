@@ -305,6 +305,7 @@ function pollGamepad() {
             else if (gamepad.buttons[XboxButtons.A].pressed && !previousAButtonState) {
                 space();
                 
+                
                  // Update the previous state to "pressed"
             }
 
